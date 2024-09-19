@@ -39,26 +39,28 @@
 
 
 // Task 3
-// const discountCalculation = function(purchaseAmount) {
-//   if(isNaN(purchaseAmount) || purchaseAmount === 0) {
-//     return null;
-//   }
+const discountCalculation = function(purchaseAmount) {
+  if(isNaN(purchaseAmount) || purchaseAmount === 0) {
+    return null;
+  }
 
-//   let discountPercentage = 0.05;
+  let discountPercentage;
 
-//   if(purchaseAmount >= 1500) {
-//     discountPercentage = 0.10;
-//   } 
+  // if(purchaseAmount >= 1500) {
+  //   discountPercentage = 0.10;
+  // } 
 
-//   const discount = purchaseAmount * discountPercentage;
-//   const discountedPrice = purchaseAmount - discount;
+  purchaseAmount >= 1500 ? discountPercentage = 0.10 : discountPercentage = 0.05; 
 
-//   return discountedPrice;
-// }
+  const discount = purchaseAmount * discountPercentage;
+  const discountedPrice = purchaseAmount - discount;
 
-// const totalUserPrice = +prompt('Бажаєте розрахувати знижку? Введіть повну суму: ');
+  return discountedPrice;
+}
 
-// console.log('Ваша ціна зі знижкою: ' + discountCalculation(totalUserPrice));
+const totalUserPrice = +prompt('Бажаєте розрахувати знижку? Введіть повну суму: ');
+
+console.log('Ваша ціна зі знижкою: ' + discountCalculation(totalUserPrice));
 
 
 
